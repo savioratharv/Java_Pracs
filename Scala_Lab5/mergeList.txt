@@ -1,0 +1,10 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var l1 = List(1,2,3)
+        var l2 = List(4,5,6)
+        var l3 = l1 ::: l2
+        for(k <- l3){
+            println(k)
+        }
+    }
+}
