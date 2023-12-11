@@ -1,0 +1,7 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit={
+        var name: String = "Atharv Patawar"
+        var sap: String = "60009210176"
+        print(s"Hello, my name is $name \n and my sap id is $sap")
+    }
+}

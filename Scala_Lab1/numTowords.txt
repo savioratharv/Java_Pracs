@@ -1,0 +1,25 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit={
+        var num = scala.io.StdIn.readInt();
+        var s: String="";
+        var n = num;
+        while(n>0){
+            var r=n%10;
+            n=n/10;
+            r match{
+                case 1=> s="One"+s
+                case 2=> s="Two"+s
+                case 3=> s="Three"+s
+                case 4=> s="Four"+s
+                case 5=> s="Five"+s
+                case 6=> s="Six"+s
+                case 7=> s="Seven"+s
+                case 8=> s="Eight"+s
+                case 9=> s="Nine"+s
+                case 0=> s="Zero"+s
+                case _=> s="Non-digit"+s
+            }
+        }
+        print(s)
+    }
+}

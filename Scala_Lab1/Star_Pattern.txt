@@ -1,0 +1,11 @@
+object Main{
+    def main(args: Array[String]): Unit={
+        var num: Int = scala.io.StdIn.readInt()
+        for(i <- 1 to num){
+            for(j <- 1 to i){
+                print("*")
+            }
+            println("")
+        }
+    }
+}

@@ -1,0 +1,19 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit={
+        var num = scala.io.StdIn.readInt();
+        var flag: Int = 0;
+        var ctr: Int = 2;
+        do{
+            if(num%ctr==0){
+                flag=1;
+            }
+            ctr=ctr+1;
+        }while(ctr<num);
+        if(flag==1){
+            print("Not Prime");
+        }
+        else{
+            print("Prime");
+        }
+    }
+}
