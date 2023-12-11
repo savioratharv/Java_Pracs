@@ -1,0 +1,15 @@
+class Student(var name: String = "Unknown"){
+    def displayName(){
+        println(name)
+    }
+}
+
+object HelloWorld{
+    def main(args: Array[String]): Unit={
+        val stu1 = new Student()
+        val stu2 = new Student("Atharv")
+        
+        stu1.displayName()
+        stu2.displayName()
+    }
+}

@@ -1,0 +1,31 @@
+class Shape{
+    def display(){
+        println("This is a shape")
+    }
+}
+
+class Rectangle extends Shape{
+    override def display(){
+        println("This is a rectangular shape")
+    }
+}
+
+class Circle extends Shape{
+    override def display(){
+        println("This is a circular shape")
+    }
+}
+
+class Square extends Rectangle{
+    def displaySquare(){
+        println("The is a square")
+    }
+}
+
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var sq = new Square()
+        sq.displaySquare()
+        sq.display()
+    }
+}

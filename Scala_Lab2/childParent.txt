@@ -1,0 +1,28 @@
+class ParentClass{
+    def printMessage(){
+        println("This is a Parent Class")
+    }
+}
+class ChildClass extends ParentClass{
+    override def printMessage(){
+        println("This is a child Class")
+    }
+    
+    def callParent(){
+        super.printMessage()
+    }
+}
+
+
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        val parent = new ParentClass()
+        val child = new ChildClass()
+        
+        parent.printMessage()
+        
+        child.printMessage()
+        
+        child.callParent()
+    }
+}

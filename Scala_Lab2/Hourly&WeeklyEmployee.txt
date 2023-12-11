@@ -1,0 +1,47 @@
+abstract class Employee(var name: String, var job: String){
+    def getName(): String = name
+    def setName(newName: String){
+        name = newName
+    }
+    def getJobTitle(): String = job;
+    def setJobTitle(newJob: String){
+        job=newJob
+    }
+    
+    def calcWeekly(): Double;
+}
+
+class SalaryEmployee(name: String, job: String, var weekSal: Double) extends Employee(name,job){
+    def getWeeklySalary(): Double = weekSal
+    def setWeeklySalary(newSal: Double){
+        weekSal = newSal
+    }
+    override def calcWeekly(): Double = weekSal
+}
+
+class HourlyEmployee(name: String, job: String, var hourRate: Double, var hoursWorked: Double) extends Employee(name,job){
+    def getHourRate(): Double = hourRate
+    def setHourRate(newHour: Double){
+        hourRate = newHour
+    }
+    
+    def getHoursWorked(): Double = hoursWorked
+    def setHoursWorked(newHoursWorked: Double){
+        hoursWorked = newHoursWorked
+    }
+    
+    override def calcWeekly(): Double = hourRate * hoursWorked
+}
+
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var salEmp = new SalaryEmployee("Atharv", "Manager", 15000)
+        salEmp.setWeeklySalary(20000)
+        println(s"Weekly employee weekly pay: ${salEmp.calcWeekly()}")
+        
+        var hourEmp = new HourlyEmployee("Atharv", "FreeLancer", 100, 20)
+        hourEmp.setHourRate(150)
+        hourEmp.setHoursWorked(30)
+        println(s"Hourly employee weekly pay: ${hourEmp.calcWeekly()}")
+    }
+}

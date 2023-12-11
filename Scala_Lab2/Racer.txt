@@ -1,0 +1,29 @@
+object HelloWorld{
+    def main(args: Array[String]){
+        val racer_1: Int =scala.io.StdIn.readInt()
+        val racer_2: Int =scala.io.StdIn.readInt()
+        val racer_3: Int =scala.io.StdIn.readInt()
+        val racer_4: Int =scala.io.StdIn.readInt()
+        val racer_5: Int =scala.io.StdIn.readInt()
+        
+        val avg: Int =(racer_1+racer_2+racer_3+racer_4+racer_5)/5
+        
+        println("Speed of qualifying racers")
+        
+        if(racer_1>avg){
+            println(s"Racer 1: Speed $racer_1")
+        }
+        else if(racer_2>avg){
+            println(s"Racer 2: Speed $racer_2")
+        }
+        else if(racer_3>avg){
+            println(s"Racer 3: Speed $racer_3")
+        }
+        else if(racer_4>avg){
+            println(s"Racer 4: Speed $racer_4")
+        }
+        else if(racer_5>avg){
+            println(s"Racer 5: Speed $racer_5")
+        }
+    }
+}

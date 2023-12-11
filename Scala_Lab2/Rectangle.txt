@@ -1,0 +1,33 @@
+class Rectangle(var length: Double, var breadth: Double){
+    def area(){
+        var area: Double = length*breadth
+        println(s"Area is $area")
+    }
+    
+    def perimeter(){
+        var peri: Double = 2*(length+breadth)
+        println(s"Perimeter is $peri")
+    }
+}
+
+class Square(var side: Double) extends Rectangle(side,side){
+    override def area(){
+        super.area()
+    }
+    override def perimeter(){
+        super.perimeter()
+    }
+}
+
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var rect = new Rectangle(10,20)
+        var square = new Square(20)
+        
+        rect.area()
+        rect.perimeter()
+        
+        square.area()
+        square.perimeter()
+    }
+}

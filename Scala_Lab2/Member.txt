@@ -1,0 +1,66 @@
+class Member(){
+    var name: String=""
+    var age: Int=0
+    var phno: Double=0.0
+    var addr: String=""
+    var salary: Int=0
+    
+    def accept(){
+        name=scala.io.StdIn.readLine()
+        age=scala.io.StdIn.readInt()
+        phno=scala.io.StdIn.readDouble()
+        addr=scala.io.StdIn.readLine()
+        salary=scala.io.StdIn.readInt()
+    }
+    
+    def show(){
+        println(name)
+        println(age)
+        println(phno)
+        println(addr)
+        println(salary)
+    }
+}
+
+class Employee extends Member{
+    var speciale: String =""
+    override def accept(){
+        super.accept()
+        speciale=scala.io.StdIn.readLine()
+    }
+    
+    override def show(){
+        super.show()
+        println(speciale)
+    }
+}
+
+class Manager extends Member{
+    var design: String =""
+    override def accept(){
+        super.accept()
+        design=scala.io.StdIn.readLine()
+    }
+    
+    override def show(){
+        super.show()
+        println(design)
+    }
+}
+
+object Main{
+    def main(args: Array[String]): Unit={
+        val member = new Member()
+        val emp = new Member()
+        val manager = new Member()
+        
+        member.accept()
+        member.show()
+        
+        emp.accept()
+        emp.show()
+        
+        manager.accept()
+        manager.show()
+    }
+}
