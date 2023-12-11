@@ -1,0 +1,24 @@
+abstract class Animals{
+    def cats(): Unit
+    def dogs(): Unit
+}
+
+class Dog extends Animals{
+    override def cats(): Unit = println("")
+    override def dogs(): Unit = println("Dogs bark")
+}
+
+class Cat extends Animals{
+    override def cats(): Unit = println("Cats meow")
+    override def dogs(): Unit = println("")
+}
+
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        val dog = new Dog()
+        val cat = new Cat()
+        
+        dog.dogs()
+        cat.cats()
+    }
+}
