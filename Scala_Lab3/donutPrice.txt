@@ -1,0 +1,11 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var donuts: Double = 10.0
+        var price: Double = 2.5
+        var finalPrice: Double = calcPrice(donuts, price)
+        
+        println(s"The final Price is $finalPrice")
+    }
+    
+    def calcPrice(donuts: Double, price: Double): Double = (donuts*price)
+}

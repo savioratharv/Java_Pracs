@@ -1,0 +1,17 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var n = 10
+        var fib = Fibbo(n)
+        println(s"The $n th digit of Fibbonacci is $fib")
+    }
+    
+    def Fibbo(n: Int): Int = {
+        if(n<=1){
+            return n
+        }
+        else{
+            return Fibbo(n-1) + Fibbo(n-2)
+        } 
+    }    
+
+}

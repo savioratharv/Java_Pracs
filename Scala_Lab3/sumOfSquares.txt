@@ -1,0 +1,15 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        val Numbers=List(1,2,3,4,5,10,15)
+        var sum = calculateSumOfSquares(Numbers)
+        println(s"The sum of list is $sum")
+    }
+    
+    def calculateSumOfSquares(numbers: List[Int]): Int = {
+        var sum = 0
+        for(i <- numbers){
+            sum = sum+(i*i)
+        }
+        return sum
+    }
+}

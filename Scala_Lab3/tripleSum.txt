@@ -1,0 +1,20 @@
+object HelloWorld{
+    def main(args: Array[String]): Unit = {
+        var a: Int = scala.io.StdIn.readInt()
+        var b: Int = scala.io.StdIn.readInt()
+        
+        if(a==b){
+            var sum: Int = calcTripleSum(a,b)
+            println(s"Answer $sum")
+        }
+        else{
+            var sum1: Int = calcSum(a,b)
+            println(s"Answer $sum1")
+        }
+    }
+    
+    def calcTripleSum(a: Int,b: Int): Int = 3*(a+b)
+    
+    def calcSum(a: Int, b: Int): Int = (a+b)
+
+}
